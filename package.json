@@ -1,0 +1,17 @@
+{
+  "name": "infoverse",
+  "version": "1.0.0",
+  "description": "All in one Web Application for information at a glance. Includes Weather, Football Scores, Currency Rates and much more!",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Karthik Sudarsan",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.5.1",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2"
+  }
+}
