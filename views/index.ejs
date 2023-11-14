@@ -13,7 +13,6 @@
     </header>
     
     <div class="flex-container">
-        <!-- Example API data -->
         <div class="api-card">
         <h1>Holiday Calendar</h1>
         <% content.response.holidays.forEach(holiday => { %>
@@ -37,15 +36,13 @@
         </div>
         <div class="api-card">
             <div class="currency-converter">
-                <h1>Currency Exchange Rates (INR)</h1>
-        <table>
-            <tr>
-                <th>Currency</th>
-                <th>Exchange Rate</th>
-            </tr>
-            <!-- Rows will be dynamically generated here -->
-            
-        </table>
+                <h1>Currency Exchange Rates</h1>
+                <h2>1 EUR</h2>
+                <ul>
+                    <% Object.entries(exchangeRates).forEach(([currency, rate]) => { %>
+                      <li><%= currency %>: <%= rate %></li>
+                    <% }); %>
+                  </ul>
             </div>
         </div>
 

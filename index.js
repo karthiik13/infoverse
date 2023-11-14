@@ -11,6 +11,7 @@ const API_KEY_2 = process.env.API_KEY_2;
 
 const API_URL_1="https://calendarific.com/api/v2";
 const API_URL_2="https://api.openweathermap.org/data/2.5/weather?lat=10.022&lon=76.3087&units=metric";
+const API_URL_3 = "https://frankfurter.app/latest";
 const country="in";
 var dt= new Date();
 var year= dt.getFullYear();
@@ -39,6 +40,9 @@ try {
             appid: API_KEY_2
         }
     });
+    const response3 =  await axios.get(API_URL_3);
+    const exchangeRates = response3.data.rates;
+
     const data= response2.data;
     const iconURL = `http://openweathermap.org/img/wn/${data.weather[0].icon}.png`;
 	console.log(response2.data);
@@ -54,6 +58,7 @@ try {
         feelslike: data.main.feels_like,
         humidity: `Humidity: ${data.main.humidity}%`,
         wind: `Wind: ${data.wind.speed} m/s`,
+        exchangeRates
     });
 
 } catch (error) {

@@ -74,3 +74,35 @@ p {
 #humidity, #wind {
     color: #3498db;
 } 
+body {
+    font-family: 'Your Existing Font', sans-serif;
+    background-color: #f5f5f5; /* Example background color */
+    color: #333; /* Example text color */
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    /* Additional styles for h1 if needed */
+  }
+
+  h2 {
+    font-size: 20px;
+    color: #555; /* Example color */
+    margin-bottom: 10px;
+    /* Additional styles for h2 if needed */
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  li {
+    margin-bottom: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    background-color: #fff; /* Example background color */
+    border-radius: 8px;
+    /* Additional styles for li if needed */
+  }
