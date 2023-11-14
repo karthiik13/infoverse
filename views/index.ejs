@@ -27,7 +27,7 @@
             <h1>Weather in <span id="city"><%= city %></span></h1>
             <div class="weather-widget">
                 <div id="weather-icon"><img src="<%= iconURL %>" height="100"  alt="Weather Icon"></div>
-                <h2 id="temperature"><%= temperature %></h2>
+                <h2 id="temperature"><%= temperature %>°C</h2>
                 <p id="description">Feels Like : <%= feelslike %>°C</p>
                 <p id="description"><%= description %></p>
                 <p id="humidity"><%= humidity %></p>
@@ -37,12 +37,14 @@
         <div class="api-card">
             <div class="currency-converter">
                 <h1>Currency Exchange Rates</h1>
-                <h2>1 EUR</h2>
-                <ul>
-                    <% Object.entries(exchangeRates).forEach(([currency, rate]) => { %>
-                      <li><%= currency %>: <%= rate %></li>
-                    <% }); %>
-                  </ul>
+                <div class="exchange-rates">
+                    <h2>1 EUR</h2>
+                    <ul>
+                        <% Object.entries(exchangeRates).forEach(([currency, rate]) => { %>
+                            <li><strong><%= currency %></strong>: <%= rate.toFixed(4) %></li>
+                        <% }); %>
+                    </ul>
+                </div>
             </div>
         </div>
 

@@ -1,38 +1,48 @@
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
+    background: #f5f5f5; /* Light grayish background */
+    color: #333; /* Dark gray text color */
 }
 
 header {
-    background-color: #c44141;
-    color: #fff;
+    background-color: #343a40; /* Dark gray header */
+    color: #fff; /* White text color */
     text-align: center;
     padding: 20px;
 }
 
 .flex-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap; /* Disable wrapping to show items in a single row */
+    justify-content: space-around; /* Adjust as needed */
     align-items: flex-start;
     padding: 20px;
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    background-color: #f5f5f5; /* Light gray background for the container */
 }
 
 .api-card {
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    background-color: #fff; /* White background for API cards */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
     margin: 10px;
     padding: 20px;
-    width: 300px;
+    width: 300px; /* Set a fixed width for each API card */
+    max-height: 400px; /* Set a maximum height for each API card */
+    overflow: auto; /* Enable vertical scrolling for each API card */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.api-card h1, .api-card h2 {
+    color: #333; /* Dark gray heading text color for API cards */
 }
 
 .weather-widget {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
@@ -40,12 +50,11 @@ header {
 }
 
 h1 {
-    font-size: 24px;
-    margin: 0;
+    color: #fff; /* White heading text color for InfoVerse */
 }
 
-#weather-icon {
-    margin: 10px 0;
+h2 {
+    color: #333; /* Dark gray heading text color for others */
 }
 
 #weather-icon img {
@@ -54,55 +63,47 @@ h1 {
 }
 
 p {
-    font-size: 16px;
     margin: 10px 0;
 }
 
 #city {
     font-weight: bold;
-    color: #333;
+    color: #6c757d; /* Medium gray city name */
 }
 
 #description {
-    color: #555;
+    color: #868e96; /* Light gray description text color */
 }
 
 #temperature {
-    color: #e74c3c;
+    color: rgb(0, 0, 0); /* Red temperature text color */
 }
 
 #humidity, #wind {
-    color: #3498db;
-} 
-body {
-    font-family: 'Your Existing Font', sans-serif;
-    background-color: #f5f5f5; /* Example background color */
-    color: #333; /* Example text color */
-  }
+    color: #3498db; /* Blue humidity and wind text color */
+}
 
-  h1 {
-    font-size: 24px;
-    margin-bottom: 20px;
-    /* Additional styles for h1 if needed */
-  }
+.currency-converter {
+    background-color: #f9f9f9; /* Light gray background for currency converter */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
 
-  h2 {
-    font-size: 20px;
-    color: #555; /* Example color */
-    margin-bottom: 10px;
-    /* Additional styles for h2 if needed */
-  }
+.exchange-rates {
+    margin-top: 10px;
+}
 
-  ul {
+.exchange-rates ul {
     list-style-type: none;
     padding: 0;
-  }
+}
 
-  li {
+.exchange-rates li {
     margin-bottom: 10px;
-    padding: 15px;
+    padding: 10px;
     border: 1px solid #ddd;
-    background-color: #fff; /* Example background color */
-    border-radius: 8px;
-    /* Additional styles for li if needed */
-  }
+    border-radius: 5px;
+}
