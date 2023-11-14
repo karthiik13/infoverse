@@ -1,109 +1,123 @@
-body {
+@keyframes wave {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: -50% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f5f5f5; /* Light grayish background */
-    color: #333; /* Dark gray text color */
-}
-
-header {
-    background-color: #343a40; /* Dark gray header */
-    color: #fff; /* White text color */
+    background-image: linear-gradient(to right, #f5f5f5, #e8e8e8);
+    color: #222;
+    animation: wave 15s linear infinite;
+  }
+  
+  header {
+    background-image: linear-gradient(to right, #343a40, #292e35);
+    color: #fff;
     text-align: center;
     padding: 20px;
-}
-
-.flex-container {
+  }
+  
+  .flex-container {
     display: flex;
-    flex-wrap: nowrap; /* Disable wrapping to show items in a single row */
-    justify-content: space-around; /* Adjust as needed */
+    flex-wrap: nowrap;
+    justify-content: space-between;
     align-items: flex-start;
-    padding: 20px;
-    overflow-x: auto; /* Enable horizontal scrolling if needed */
-    background-color: #f5f5f5; /* Light gray background for the container */
-}
-
-.api-card {
-    background-color: #fff; /* White background for API cards */
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 8px;
+    padding: 30px 50px;
+    overflow-x: auto;
+  }
+  
+  .api-card {
+    background-image: linear-gradient(to right, #fff, #f8f8f8);
+    border: 1px solid #ddd;
+    border-radius: 20px;
     margin: 10px;
     padding: 20px;
-    width: 300px; /* Set a fixed width for each API card */
-    max-height: 400px; /* Set a maximum height for each API card */
-    overflow: auto; /* Enable vertical scrolling for each API card */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.api-card h1, .api-card h2 {
-    color: #333; /* Dark gray heading text color for API cards */
-}
-
-.weather-widget {
-    background-color: #fff;
-    border: 1px solid #ddd; /* Light gray border */
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    max-height: 400px;
+    overflow: auto;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .api-card h1, .api-card h2 {
+    color: #222;
+  }
+  
+  .weather-widget {
+    background-image: linear-gradient(to right, #f2f2f2, #e6e6e6);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
     margin: 50px auto;
-}
-
-h1 {
-    color: #fff; /* White heading text color for InfoVerse */
-}
-
-h2 {
-    color: #333; /* Dark gray heading text color for others */
-}
-
-#weather-icon img {
+  }
+  
+  h1 {
+    color: #fff;
+  }
+  
+  h2 {
+    color: #4e555c;
+  }
+  
+  #weather-icon img {
     max-width: 100px;
     height: auto;
-}
-
-p {
+  }
+  
+  p {
     margin: 10px 0;
-}
-
-#city {
+  }
+  
+  #city {
     font-weight: bold;
-    color: #6c757d; /* Medium gray city name */
-}
-
-#description {
-    color: #868e96; /* Light gray description text color */
-}
-
-#temperature {
-    color: rgb(0, 0, 0); /* Red temperature text color */
-}
-
-#humidity, #wind {
-    color: #3498db; /* Blue humidity and wind text color */
-}
-
-.currency-converter {
-    background-color: #f9f9f9; /* Light gray background for currency converter */
+    color: #585f66;
+  }
+  
+  #description {
+    color: #767f87;
+  }
+  
+  #temperature {
+    color: #ff8c00;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  }
+  
+  #humidity, #wind {
+    color: #2196f3;
+  }
+  
+  .currency-converter {
+    background-image: linear-gradient(to right, #f6f6f6, #eee);
     border: 1px solid #ddd;
-    border-radius: 8px;
+    border-radius: 10px;
     padding: 15px;
     margin-top: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-}
-
-.exchange-rates {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exchange-rates {
     margin-top: 10px;
-}
-
-.exchange-rates ul {
+  }
+  
+  .exchange-rates ul {
     list-style-type: none;
     padding: 0;
-}
-
-.exchange-rates li {
+  }
+  
+  .exchange-rates li {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-}
+  }
+  
